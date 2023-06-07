@@ -3,7 +3,6 @@
 
 echo "Hola mundooooooooooooooo";
 
-
 echo "<br>";
 echo "<br>";
 
@@ -60,7 +59,7 @@ $subtraction = $numero1 - $numero2;
 echo "resultado de la substracion:" . $subtraction . "<br>". "<br>";
 
 $multiplication = $numero1 * $numero2;
-echo "resultado de la multiplicacion:" . $multiplicacion . "<br>". "<br>";
+echo "resultado de la multiplicacion:" . $multiplication . "<br>". "<br>";
 
 $division = $numero1 / $numero2;
 echo "resultado de la division:" . $division . "<br>". "<br>";
@@ -117,7 +116,6 @@ $arrayasoci = array(
 echo "<br>";
 echo "<br>";
 
-
 echo $arrayasoci["clase1"]. "<br>";
 echo $arrayasoci["clase2"]. "<br>";
 echo $arrayasoci["clase3"]. "<br>";
@@ -126,14 +124,12 @@ echo $arrayasoci["clase5"]. "<br>";
 
 echo "<br>";
 
-
 foreach ($arrayasoci as $clase => $valor){
     echo "clase: " . $clase . ", valor: " . $valor. "<br>";
 }
 
 echo "<br>";
 echo "<br>";
-
 
 //isseet() y Empty()
 
@@ -146,30 +142,206 @@ else{
     echo "la variable no tiene valores, revisa tu codigo";
 }
 
+echo "<br>";
+echo "<br>";
 
-$clientes = [];
-$clientes2 = array();
-$clientes3 = array("pedro", "juan", "karen");
+$cliente = [];
+$cliente2 = array();
+$cliente3 = array("pedro", "juan", "karen");
 $cliente = [
     "nombre" => "juan",
     "saldo" => 200
 ];
 
-var_dump(empty($cientes));
-var_dump(empty($ciente2));
-var_dump(empty($ciente3));
+var_dump(empty($cliente));
+
+echo "<br>";
+
+var_dump(empty($cliente3));
+
+echo "<br>";
+
+var_dump(empty($cliente2));
+
+echo "<br>";
+
+var_dump(isset($cliente["nombre"]));
+
+echo "<br>";
+
+var_dump(isset($cliente ["codigo"]));
+
+echo "<br>";
+
+//ordenar elementos de un arreglo
+$numeros = array(1,3,4,5,1,2);
+sort($numeros);
+rsort($numeros);
+
+var_dump($numeros);
+
+echo "<br>";  
+
+//operadores de ordenacion en arrays
+
+$cliente = array("a", "b", "z", "k", "p", "r", "w");
+
+asort($cliente);
+
+echo "<br>";
+
+var_dump($cliente);
+
+echo "<br>";
+
+arsort($cliente);
+
+echo "<br>";
+
+var_dump($cliente);
+
+echo "<br>";
+
+ksort($cliente);
+
+echo "<br>";
+
+var_dump($cliente);
+
+echo "<br>";
+
+krsort($cliente);
+
+echo "<br>";
+
+var_dump($cliente);
 
 
+echo "<br>";
+
+//cliclos, if, while, foreach
+
+$salario = 900000;
+    $noSubsidioMsg = "Usted (NO) tiene derecho a subsidio";
+    $siSubsidioMsg = "Usted (SI) tiene derecho a subsidio";
+    
+    if ($salario >= 3000000){
+        echo $noSubsidioMsg;
+    }
+    
+    elseif($salario >= 1000000){
+        echo $siSubsidioMsg;
+    }
+    else{
+        echo "Usted tiene derecho a un subcidio de vivivenda <br>";
+    }
+
+    
+    echo "<br>";
 
 
+    $temperatura = 15;
+    
+    
+    if ($temperatura < 0 || $temperatura > 30){
+        echo "El clima no esta bonito hoy";
+    }
+    else{
+        echo "el clima esta bonito hoy<br>";
+
+    }
+
+    
+    echo "<br>";
+
+    $hora = "03:00 P.M";
+
+        switch($hora){
+            case "06:00 A.M";
+            echo "Camper, Tienes Software skill";
+            break;
+            case "08:00 A.M";
+            echo "Camper, Tienes Break";
+            break;
+            case "10:00 A.M";
+            echo "Camper, Tienes clase de inglés";
+            break;
+            case "12:00 A.M";
+            echo "Camper, Tienes que comerrrr";
+            break;
+            case "02:00 P.M";
+            echo "Camper, Tienes Software review";
+            break;
+            default:
+            echo "camper, a mimir";
+            break;
+        
+        }
+
+        
+        echo "<br>";
+
+        if($_POST){
+            $counter = $_POST["counter"];
+            for($i=1; $i<= $counter;$i++){
+            
+            echo $i . " ";
+            }
+        }
+
+        echo "<br>";
+
+        $contador = 0;
+
+        while ($contador < 10){
+            $contador ++;
+            echo $contador . " ";
+        }
+
+        echo "<br>";
+
+        $palabra = array("hola", "mundo", "como", "estan", "yo","bien");
+
+        echo $palabra[0] . " ";
+        echo $palabra[1] . " ";
+        echo $palabra[2] . " ";
+        echo $palabra[3] . " ";
+        echo $palabra[4] . " ";
+        echo $palabra[5] . " ";
 
 
+       array_push ($palabra, "julian");
+       array_pop($palabra);
+       array_shift($palabra);
 
+       echo "<br>";
 
+       foreach($palabra as $e){
+        echo $e . " ";
+    }
 
+    echo "<br>";
 
+    //funciones 
 
+    //funcion con la palabra reservada void
 
+    declare(stric_type=1);
+    function sumar (int $numero1 = 0, array $numero2):void{
+        echo $numero1 + $numero2;
+    }
+    sumar(10,[]);
+
+    //funcion sin la palabra reservada void
+    
+    /*
+    declare(strict_types=1);
+    function sumar(int $numero1 = 0, array $numero2){
+        echo $numero1 + $numero2;
+    }
+    sumar(10,[]);
+    
+    */
 
 
 
